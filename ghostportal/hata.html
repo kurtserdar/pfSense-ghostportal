@@ -1,0 +1,287 @@
+<!-- Samet YILMAZ, Uğur Demir, Serdar KURT
+
+Web : www.sametyilmaz.com.tr
+Mail : sametyilmaznet@gmail.com
+
+Web: www.serdarkurt.com.tr
+Mail: info@serdarkurt.com.tr
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<!-- Metas -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=360px, initial-scale=1, maximum-scale=1">
+
+	<!-- Styles -->
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<style>
+		a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+		* {outline: none;}
+		body {font-family: 'Titillium Web', sans-serif; line-height: 100%;}
+		.accordion {
+			position: relative;
+			display: block;
+			width: 290px; height: auto;
+			margin: 50px auto;
+			padding: 10px 30px;
+			border: 1px solid #585858;
+			border-radius: 10px;
+			box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+		}
+		.accordion small {
+			display: block;
+			text-align: center;
+			font-size: 13px;
+		}
+		.tabs {
+			position: relative;
+			display: block;
+			margin: 10px 0;
+		}
+		.tabs > div {
+			position: relative;
+			display: block;
+			margin: 5px 0;
+		}
+		.tabs > div h1 {
+			position: relative;
+			display: block;
+			text-align: center;
+			background: #0464c8;
+			color: #fff;
+			font-size: 14px;
+			padding: 5px 0;
+			cursor: pointer;
+		}
+		.tabs > div .content {display: none; padding: 15px 0;}
+		.tabs > div.active .content {display: block;}
+		.tabs > div input {
+			position: relative;
+			display: block;
+		}
+		.tabs > div img {
+			display: block;
+			margin: 15px 0 20px;
+		}
+		.tabs > div input[type="text"],
+		.tabs > div input[type="password"] {
+			display: block;
+			width: 94%;
+			padding: 5px 8px;
+			margin: 5px auto;
+			border: none;
+			background: #9b0000;
+			font: 14px 'Titillium Web', sans-serif;
+			color: #fff;
+		}
+		.tabs > div#vouncher input[type="text"] {width: 140px; text-align: center;}
+			::-webkit-input-placeholder {color: #fff;}
+			:-moz-placeholder {color: #fff;}
+			::-moz-placeholder {color: #fff;}
+			:-ms-input-placeholder {color: #fff;}
+		.tabs > div input[type="submit"] {
+			display: block;
+			padding: 5px 8px;
+			margin: 15px 0 5px;
+			border: none;
+			background: #cdcdcd;
+			font: 14px 'Titillium Web', sans-serif;
+			color: #333;
+			cursor: pointer;
+		}
+		.tabs > div#vouncher input[type="submit"] {margin: 15px auto 5px;}
+		.tabs > div p {
+			position: relative;
+			display: block;
+			text-align: center;
+			font-size: 13px;
+			margin-bottom: 15px;
+		}
+	</style>
+			<!-- Scripts -->
+		<script src="captiveportal-jquery-1.11.0.min.js"></script>
+
+
+	<script>
+		/*! http://mths.be/placeholder v2.0.7 by @mathias */
+		!function(a,b,c){function l(a){var b={},d=/^jQuery\d+$/;return c.each(a.attributes,function(a,c){c.specified&&!d.test(c.name)&&(b[c.name]=c.value)}),b}function m(a,b){var d=this,e=c(d);if(d.value==e.attr("placeholder")&&e.hasClass("placeholder"))if(e.data("placeholder-password")){if(e=e.hide().next().show().attr("id",e.removeAttr("id").data("placeholder-id")),a===!0)return e[0].value=b;e.focus()}else d.value="",e.removeClass("placeholder"),d==o()&&d.select()}function n(){var a,b=this,d=c(b),e=this.id;if(""==b.value){if("password"==b.type){if(!d.data("placeholder-textinput")){try{a=d.clone().attr({type:"text"})}catch(f){a=c("<input>").attr(c.extend(l(this),{type:"text"}))}a.removeAttr("name").data({"placeholder-password":d,"placeholder-id":e}).bind("focus.placeholder",m),d.data({"placeholder-textinput":a,"placeholder-id":e}).before(a)}d=d.removeAttr("id").hide().prev().attr("id",e).show()}d.addClass("placeholder"),d[0].value=d.attr("placeholder")}else d.removeClass("placeholder")}function o(){try{return b.activeElement}catch(a){}}var j,k,d="[object OperaMini]"==Object.prototype.toString.call(a.operamini),e="placeholder"in b.createElement("input")&&!d,f="placeholder"in b.createElement("textarea")&&!d,g=c.fn,h=c.valHooks,i=c.propHooks;e&&f?(k=g.placeholder=function(){return this},k.input=k.textarea=!0):(k=g.placeholder=function(){var a=this;return a.filter((e?"textarea":":input")+"[placeholder]").not(".placeholder").bind({"focus.placeholder":m,"blur.placeholder":n}).data("placeholder-enabled",!0).trigger("blur.placeholder"),a},k.input=e,k.textarea=f,j={get:function(a){var b=c(a),d=b.data("placeholder-password");return d?d[0].value:b.data("placeholder-enabled")&&b.hasClass("placeholder")?"":a.value},set:function(a,b){var d=c(a),e=d.data("placeholder-password");return e?e[0].value=b:d.data("placeholder-enabled")?(""==b?(a.value=b,a!=o()&&n.call(a)):d.hasClass("placeholder")?m.call(a,!0,b)||(a.value=b):a.value=b,d):a.value=b}},e||(h.input=j,i.value=j),f||(h.textarea=j,i.value=j),c(function(){c(b).delegate("form","submit.placeholder",function(){var a=c(".placeholder",this).each(m);setTimeout(function(){a.each(n)},10)})}),c(a).bind("beforeunload.placeholder",function(){c(".placeholder").each(function(){this.value=""})}))}(this,document,jQuery);
+
+		$(function() {
+			$("input, textarea").placeholder();
+			$(".tabs > div h1").click(function() {
+				var cla = $(this).parent("div").attr("class");
+				if ( cla != "active" ) {
+					$(".tabs > div .content").stop(true).slideUp(250).parent("div").removeClass("active");
+					$(this).next(".content").stop(true).slideDown(250);
+				}
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="accordion">
+		<div class="tabs">
+		<img src="captiveportal-logo.png" alt="" id="logo">
+
+			<div id="hata" class="active">
+
+				<h1>Hata</h1>
+				<div class="content">
+					<p>Bilgileriniz doğrulanamadı, Lütfen tekrar deneyiniz.</p>
+
+				</div>
+			</div>
+
+			<div id="login">
+
+				<h1>Giriş Yap</h1>
+				<div class="content">
+					<div><small>Onceden TCKN ile uye olduysaniz, <br>Kullanici Adiniz:<bold>TCKN</bold><br>Sifreniz:<bold>Dogum Yiliniz</bold>dir.</small></div>
+
+					<form method="post" action="$PORTAL_ACTION$" id="f">
+						<input type="text" name="auth_user" id="u" placeholder="Kullanıcı Adınız">
+						<input type="password" name="auth_pass" id="p" placeholder="Şifreniz">
+						   <input name="redirurl" type="hidden" id="c" >
+						 <input name="accept" type="submit" id="basgotunebunun" value="Giriş Yap">
+					</form>
+				</div>
+			</div>
+			<div id="sms">
+				<h1>Sms ile kayıt ol.</h1>
+				<div class="content">
+								<p>Aşağıdaki form'a telefon numaranızı 0 koymadan yazınız. Ornek : 5322225434</p>
+
+					<form action="captiveportal-sms.php" method="POST" id="smsicerik">
+						<input type="text" name="ad" placeholder="Ad">
+						<input type="text" name="soyad" placeholder="Soyad">
+						<input type="text" name="telefon" placeholder="Telefon Numaranız">
+						<input type="submit" id="gonder" value="Gönder">
+					</form>
+
+
+                </div>
+
+
+			</div>
+			<div id="tc">
+				<h1>TC Kimlik ile kayıt ol.</h1>
+				<div class="content">
+					<p>Lütfen aşağıdaki formu nüfus cüzdanınızdaki gibi doldurunuz. Eğer kimlik bilgileriniz onaylanırsa sisteme otomatik giriş yapacaksınız.</p>
+					<form action="captiveportal-tc.php" name="tcilesorgu" id="tcilesorgu">
+						<input type="text" name="tc" placeholder="TC Kimlik No">
+						<input type="text" name="ad" placeholder="Adınız">
+						<input type="text" name="soyad" placeholder="Soyadınız">
+						<input type="text" name="dogum" placeholder="Doğum Yılı">
+
+						<input type="submit" id="tcsorgu"  value="Gönder"><div id="sorgu"></div>
+					</form>
+				</div>
+			</div>
+			<div id="vouncher">
+				<h1>Vouncher kodu ile giriş.</h1>
+				<div class="content">
+					<p>Lütfen Sistem Yöneticisinden aldığınız vouncher kodunu yazıp giriş yapınız.</p>
+					<form method="post" action="$PORTAL_ACTION$">
+
+						 <input name="auth_voucher" placeholder="Vouncher Kod" type="text">
+						   <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+						 <input name="accept" type="submit" value="Giriş Yap">
+					</form>
+				</div>
+			</div>
+		</div>
+		<small>İnternet erişimleriniz 5651 sayılı kanun gereğince kayıt altına alınmaktadır.</small>
+	</div>
+<script>
+
+
+
+		$("#gonder").click(function(e)
+		{
+
+			$('#gonder').val('Sms Gonderiliyor...').delay(1000).prop('disabled', true);
+			var postData = $('#smsicerik').serializeArray();
+			var formURL = $('#smsicerik').attr("action");
+			$.ajax(
+			{
+				url : formURL,
+				type: "POST",
+				data : postData,
+				success:function(data)
+				{
+
+					if(data == 1)
+
+					alert('Kullanici adi ve sifreniz telefon numaraniza gonderildi. Giris yap bolumunden giris yapabilirsiniz.');
+
+					else if (data == 3) {
+
+						alert('Girilen telefon numarası yanlış.');
+					}
+
+					else
+
+					alert('Bilgilerinizde bir yanlışlık soz konusu.Lutfen tekrar deneyiniz.');
+
+				},
+				error: function(jqXHR, textStatus, errorThrown)
+				{
+					 alert("Data not found");
+					//if fails
+				}
+			});
+			e.preventDefault(); //STOP default action
+		});
+
+		function girisyap(user,pass)
+		{
+
+		$('#u').val(user);
+		$('#p').val(pass);
+		$('#c').val('$PORTAL_REDIRURL$');
+		$('#basgotunebunun').click();
+		//$('#f').submit();et.
+		}
+
+
+		$("#tcsorgu").click(function(e)
+		{
+
+			$('#tcsorgu').val('Dogrulanıyor...').delay(1000).prop('disabled', true);
+			var postData = $('#tcilesorgu').serializeArray();
+			var formURL = $('#tcilesorgu').attr("action");
+			$.ajax(
+			{
+				url : formURL,
+				type: "POST",
+				data : postData,
+				success:function(data)
+				{
+
+					var datam = data.split(',');
+					var user = datam[0];
+					var pass = datam[1];
+					girisyap(user,pass);
+
+
+				},
+				error: function(jqXHR, textStatus, errorThrown)
+				{
+					 alert("Data not found");
+
+				}
+			});
+			e.preventDefault();
+		});
+		</script>
+
+
+
+</body>
+</html>
