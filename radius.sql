@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `ghost_settings` (
 -- Dumping data for table radius.ghost_settings: ~1 rows (yaklaşık)
 /*!40000 ALTER TABLE `ghost_settings` DISABLE KEYS */;
 INSERT INTO `ghost_settings` (`id`, `dayssms`, `passwordexptime`, `smsuser`, `smspass`, `smsno`, `apiurl`) VALUES
-	(1, 'gerek yok', '50', '5379229197', '31233123', 'ILETI MRKZI', 'http://api.iletimerkezi.com/v1/send-sms ');
+	(1, 'gerek yok', '50', 'kullanici adi', 'sifre', 'sms basligi', 'http://api.iletimerkezi.com/v1/send-sms');
 /*!40000 ALTER TABLE `ghost_settings` ENABLE KEYS */;
 
 
